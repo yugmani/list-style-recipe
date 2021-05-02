@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colored Circle Numbers</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      ol {
+        list-style: none;
+        counter-reset: steps;
+      }
+      ol li {
+        counter-increment: steps;
+      }
+      ol li::before {
+        content: counter(steps);
+        margin-right: 0.5rem;
+        background: #ff6f00;
+        color: white;
+        width: 1.2em;
+        height: 1.2em;
+        border-radius: 50%;
+        display: inline-grid;
+        place-items: center;
+        line-height: 1.2em;
+      }
+
+      ol ol li::before {
+        background: darkorchid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Colored Circle Numbers</h1>
+      <div class="list-style">
+        <ol>
+          <li>Preheat oven to 425&deg;F</li>
+          <li>
+            Mix all the ingredients
+            <ol>
+              <li>Dump in bowl</li>
+              <li>Stir with whisk</li>
+            </ol>
+          </li>
+          <li>Dump it all into a greased pan</li>
+          <li>Bake for 40 minutes</li>
+        </ol>
+      </div>
+      <div class="code">
+        <h3>Code Syntax</h3>
+        <div class="code-section">
+          &#60;style &#62;<br />
+          <div class="code-line">
+            ol {<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;counter-reset:steps;<br />
+            }<br /><br />
+            ol li {<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;counter-increment:steps;<br />
+            }<br /><br />
+            ol li::before { <br />
+            &#160;&#160;&#160;&#160;&#160;&#160;content:counter(steps);<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;background:#ff6f00;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;border-radius:50%;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;display:inline-grid;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;place-items:center;<br />
+            }<br /><br />
+
+            ol ol li {<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;background:darkorchid;<br />
+            }<br /><br />
+          </div>
+          &#60;&#47;style &#62;
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: whitesmoke;
-  height: 110vh;
+  height: auto;
 }
 .container {
   width: 50%;
@@ -35,6 +35,9 @@ h1 {
 }
 
 .code {
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px;
 }
 
 .code h3 {

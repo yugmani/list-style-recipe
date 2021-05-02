@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colored Bullets</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .color-with-marker {
+        list-style-position: inside;
+      }
+
+      .color-with-marker li::marker {
+        color: red;
+      }
+      .color-with-pseudo {
+        list-style: none;
+        list-style-position: inside;
+      }
+
+      .color-with-pseudo li::before {
+        content: "•";
+        font-size: 130%;
+        line-height: 0;
+        margin: 0 0.3rem 0 -0.25rem;
+        position: relative;
+        top: 0.08rem;
+        color: blue;
+      }
+
+      .color-with-svg {
+        list-style: none;
+      }
+      .color-with-svg li::before {
+        content: "";
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='red'/%3E%3C/svg%3E");
+        background-size: 38%;
+        background-repeat: no-repeat;
+        background-position: left center;
+        position: relative;
+        top: 0.08rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Colored Bullets</h1>
+      <div class="list-style">
+        <h3>color with marker</h3>
+        <ul class="color-with-marker">
+          <li>These</li>
+          <li>List Bullets</li>
+          <li>are colored</li>
+          <li>with</li>
+          <li>::marker</li>
+        </ul>
+      </div>
+      <div class="list-style">
+        <h3>color with pseudo</h3>
+        <ul class="color-with-pseudo">
+          <li>These</li>
+          <li>List Bullets</li>
+          <li>are colored</li>
+          <li>with</li>
+          <li>a pseduo-element</li>
+        </ul>
+      </div>
+      <div class="list-style">
+        <h3>color with svg</h3>
+        <ol class="color-with-svg">
+          <li>These</li>
+          <li>List Bullets</li>
+          <li>are colored</li>
+          <li>with</li>
+          <li>SVG as a backround-image</li>
+        </ol>
+      </div>
+      <div class="code">
+        <h3>Code Syntax</h3>
+        <div class="code-section">
+          &#60;style &#62;<br />
+          <div class="code-line">
+            ul li::marker {<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;color:red;<br />
+            }<br /><br />
+            ul li::before {<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;content:"•";<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;position:relative;<br />
+            }<br /><br />
+            ul li::before { <br />
+            &#160;&#160;&#160;&#160;&#160;&#160;content:"";<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;background-image:url("svg-code");<br />
+            }<br />
+          </div>
+          &#60;&#47;style &#62;
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Cycling List Symbols</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .list-style {
+        background-image: url("../custom-list.PNG");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 300px;
+        width: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Custom Cycling List</h1>
+      <div class="list-style"></div>    
+    <div class="code">
+      <h3>Code Syntax</h3>
+      <div class="code-section">
+        &#60;style &#62;<br />
+        <div class="code-line">
+          ol {<br />
+          &#160;&#160;&#160;&#160;&#160;&#160;list-style:symbols(cyclic "♪" "♫"
+          "♩" "♬");<br />
+          }<br /><br />
+          @counter-style thumbs {<br />
+          &#160;&#160;&#160;&#160;&#160;&#160;system:cyclic;<br />
+          &#160;&#160;&#160;&#160;&#160;&#160;symbols:"♪" "♫" "♩" "♬";<br />
+          &#160;&#160;&#160;&#160;&#160;&#160;/*<br />
+          &#160;&#160;&#160;&#160;&#160;&#160;prefix: "before";<br />
+          &#160;&#160;&#160;&#160;&#160;&#160;*/<br />
+          &#160;&#160;&#160;&#160;&#160;&#160;suffix: " "; <br />
+          }<br /><br />
+          ul {<br />
+          &#160;&#160;&#160;&#160;&#160;&#160;list-style:thumbs;<br />
+          }<br />
+        </div>
+        &#60;&#47;style &#62;<br /><br />
+        <p><mark>Note:</mark><em> This is only supported in Firefox at the time of writing.</em></p><br />
+        <p><mark>Reference:</mark><em><a href="https://css-tricks.com/list-style-recipes/"> List Style Recipes: 
+            Chris Coyier on May 5, 2020</a></em></p>
+      </div>
+      
+    </div>
+  </body>
+</html>
