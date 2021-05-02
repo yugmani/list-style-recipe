@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emoji Bullets</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      ul {
+        list-style: none;
+      }
+      ul li::before {
+        content: "💋";
+        display: inline-block;
+        margin-right: 0.2rem;
+      }
+      ul ul li::before {
+        content: "⚽";
+      }
+      ul ul ul li::before {
+        content: "🚀";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Emoji Bullets</h1>
+      <div class="list-style">
+        <ul>
+          <li>List Item</li>
+          <li>
+            List Item
+            <ul>
+              <li>List Item</li>
+              <li>
+                List Item
+                <ul>
+                  <li>List Item</li>
+                  <li>List Item</li>
+                </ul>
+              </li>
+              <li>List Item</li>
+            </ul>
+          </li>
+          <li>List Item</li>
+        </ul>
+      </div>
+      <div class="code">
+        &#60;style &#62;<br /><br />
+        <div class="code-line">
+          ul {<br />
+          &#160;&#160;&#160;&#160;&#160;&#160;list-style:none;<br />
+          }<br />
+          ul li::before { <br />
+          &#160;&#160;&#160;&#160;&#160;&#160;content: "👾";
+          <br />&#160;&#160;&#160;&#160;&#160;&#160;display: inline-block;<br />
+          }<br /><br />
+          /*
+          <h4>New Syntax:</h4>
+          <br />
+          ul li::marker {<br />
+          &#160;&#160;&#160;&#160;&#160;&#160;content: "💌"; }<br />
+          */
+        </div>
+        &#60;&#47;style &#62;
+      </div>
+    </div>
+  </body>
+</html>

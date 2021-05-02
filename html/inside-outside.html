@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inside vs Outside List Style</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .inside {
+        list-style-position: inside;
+        border-left: 2px solid red;
+        padding: 0;
+      }
+      .outside {
+        margin-left: 30px;
+        list-style-position: outside;
+        border-left: 2px solid blue;
+        padding-left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Inside vs Outside List Style</h1>
+      <div class="list-style">
+        <h3>list-style-position: inside;</h3>
+        <ol class="inside">
+          <li>Lorem, ipsum.</li>
+          <li>Similique, culpa.</li>
+          <li>Atque, vel?</li>
+          <li>Repudiandae, expedita.</li>
+          <li value="9999">Perferendis, modi.</li>
+        </ol>
+      </div>
+      <div class="list-style">
+        <h3>list-style-position: outside;</h3>
+        <ol class="outside">
+          <li>Lorem, ipsum.</li>
+          <li>Similique, culpa.</li>
+          <li>Atque, vel?</li>
+          <li>Repudiandae, expedita.</li>
+          <li value="9999">Perferendis, modi.</li>
+        </ol>
+      </div>
+      <div class="code">
+        <h3>Code Syntax</h3>
+        <div class="code-section">
+          &#60;style &#62;<br />
+          <div class="code-line">
+            .inside {<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;list-style-position: inside;<br />
+            }<br /><br />
+            .outside {<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;list-style-position: outside;<br />
+            }<br />
+          </div>
+          &#60;&#47;style &#62;
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

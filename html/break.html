@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break list in the middle</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .note {
+        background: lightyellow;
+        border: 1px solid yellow;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>The Break in the Middle</h1>
+
+      <div class="list-style">
+        <h2>&#60;ol start="4"&#62; ... &#60;&#47;ol &#62;</h2>
+        <h3>
+          <em>Ordered lists can start at any number you want them to.</em>
+        </h3>
+        <ol>
+          <li>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima,
+            quos.
+          </li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+            alias. Id, cupiditate?
+          </li>
+        </ol>
+        <div class="note"><em>... fall asleep for 5 hours ...</em></div>
+        <ol start="4">
+          <li>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima,
+            quos.
+          </li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+            alias. Id, cupiditate?
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

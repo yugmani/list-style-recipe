@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inside Aligned List Style</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .inside-aligned {
+        border-left: 2px solid red;
+        padding: 0;
+        list-style: none;
+        counter-reset: li;
+      }
+
+      .inside-aligned li {
+        counter-increment: li;
+      }
+
+      @supports (grid-template-columns: subgrid) {
+        .inside-aligned {
+          display: grid;
+          grid-template-columns: min-content 1fr;
+        }
+
+        .inside-aligned li {
+          grid-column: 1 / -1;
+          display: grid;
+          grid-template-columns: subgrid;
+        }
+      }
+
+      .inside-aligned li::before {
+        content: counter(li) ".";
+        margin-right: 0.2rem;
+      }
+
+      .inside-aligned li::last-child::before {
+        content: "9999.";
+      }
+
+      .inside-aligned-right li::before {
+        text-align: end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Inside Aligned List Style</h1>
+      <div class="list-style">
+        <h3>inside-aligned</h3>
+        <ol class="inside-aligned">
+          <li>Lorem, ipsum.</li>
+          <li>Similique, culpa.</li>
+          <li>Atque, vel?</li>
+          <li>Repudiandae, expedita.</li>
+          <li>Perferendis, modi.</li>
+        </ol>
+      </div>
+      <div class="list-style">
+        <h3>inside-aligned-right</h3>
+        <ol class="inside-aligned inside-aligned-right">
+          <li>Lorem, ipsum.</li>
+          <li>Similique, culpa.</li>
+          <li>Atque, vel?</li>
+          <li>Repudiandae, expedita.</li>
+          <li>Perferendis, modi.</li>
+        </ol>
+      </div>
+      <div class="code">
+        <h3>Code Syntax</h3>
+        <div class="code-section">
+          &#60;style &#62;<br />
+          <div class="code-line">
+            .inside-aligned {<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;display:grid;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;grid-template-columns:min-content:1fr;<br />
+            }<br />
+            .inside-aligned li {<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;grid-column:1 / -1;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;display:grid;<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;grid-template-columns:subgrid;<br />
+            }<br />
+            .inside-aligned li:last-child::before{<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;content:"9999.";<br />
+            }<br />
+            .inside-aligned-right li::before{<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;text-align:end;<br />
+            }<br />
+          </div>
+          &#60;&#47;style &#62;
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
